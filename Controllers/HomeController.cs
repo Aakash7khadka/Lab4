@@ -25,15 +25,15 @@ namespace Lab4.Controllers
         }
         public IActionResult SetSession()
         {
-            HttpContext.Session.SetString("Name", "Texas International College");
-            HttpContext.Session.SetString("Address", "Mitrapark");
+            HttpContext.Session.SetString("Name", "Aakash Khadka");
+            HttpContext.Session.SetString("Address", "Sundarijal");
             return Content("Session  sucessful!");
         }
 
         public IActionResult DispSession()
         {
             ViewBag.name = HttpContext.Session.GetString("Name");
-            ViewBag.roll = HttpContext.Session.GetString("Address");
+            ViewBag.address = HttpContext.Session.GetString("Address");
             return View();
 
         }
